@@ -19,4 +19,4 @@ while ($steps > $steps_left) {
 
 $paths = $possible / gmp_strval( gmp_fact( $steps_down ) );
 
-print_r($paths);
+echo $paths;

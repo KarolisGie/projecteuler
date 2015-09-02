@@ -21,8 +21,7 @@ sort($names_arr);
 $total = 0;
 
 foreach ( $names_arr as $k => $name ) {
-	$total += ( $k + 1 ) * alphabetical_value( strtolower( $name ) );
-	$totals[$k+1] = $total;
+	$total += ( $k + 1 ) * alphabetical_value( strtolower( $name ) );\
 }
 
 echo $total;

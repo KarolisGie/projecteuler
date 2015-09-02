@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Lattice paths
  * 
@@ -7,3 +6,17 @@
  * 
  * How many such routes are there through a 20×20 grid?
  */
+
+$steps_left = 20;
+$steps_down = 20;
+$possible = 1;
+$steps = $steps_left + $steps_down;
+
+while ($steps > $steps_left) {
+	$possible = $possible * $steps;
+	$steps--;
+}
+
+$paths = $possible / gmp_strval( gmp_fact( $steps_down ) );
+
+print_r($paths);
